@@ -31,8 +31,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <style>
-
-
         .demo-content {
             padding: 15px;
             font-size: 18px;
@@ -49,7 +47,23 @@
         }
 
         .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(0, 102, 255, 0.89);
+            background-color: #ff4800;
+            border-color: black;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled).active,
+        .btn-primary:not(:disabled):not(.disabled):active,
+        .show>.btn-primary.dropdown-toggle {
+            color: #fff;
+            background-color: #ff4800;
+            border-color: black;
+        }
+
+        .list-group-item.active {
+            z-index: 2;
+            color: #fff;
+            background-color: #ff4800;
+            border-color: black;
         }
     </style>
 </head>

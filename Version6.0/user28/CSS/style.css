@@ -40,7 +40,7 @@ h1 {
   text-align: center;
 }
 
-.container {
+.card-container {
   display: inline-block;
   margin: 3%;
   perspective: 1000px;
@@ -58,7 +58,7 @@ h1 {
   left: 0;
   width: 250px;
   height: 320px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   backface-visibility: hidden;
 }
 
@@ -74,17 +74,17 @@ img {
   width: 100%;
 }
 
-.container, .front, .back {
+.card-container, .front, .back {
   width: 250px;
   height: 320px;
 }
 
-.container:hover .flipper {
+.card-container:hover .flipper {
   transform: rotateY(180deg);
 }
 
 a {
-  color: rgb(255, 0, 0);
+  color:rgb(0, 0, 0)
 }
 
 p.caption {

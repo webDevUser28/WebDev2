@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -65,6 +66,10 @@
         .display-4 {
             color: rgb(147, 23, 179);
         }
+
+        center table tbody div a {
+            color: rgba(0, 0, 0, 0.671);
+        }
     </style>
 
 </head>
@@ -85,7 +90,6 @@
 
     <main>
 
-        <h1>Draw</h1>
         <h2 class="lead">For drawing people start out using the pencil so that mistakes can be erased</h2>
 
         <div class="jumbotron">
@@ -107,6 +111,8 @@
             </p>
         </div>
 
+        <h1>Draw</h1>
+
         <h3 class="topheading">Utensels used dor drawing:</h3>
         <div id="Tools">
             <li>Pencil
@@ -125,16 +131,51 @@
 
         <div class="row">
             <div class="col demo-content">
-                <img src="images/color pencils.jpeg" alt="?" height="200px" width="200px">
+                <img src="images/color pencils.jpeg"
+                    alt="color bar drawn with color pencils from yelow to red and from red to blue and the color pencils"
+                    height="200px" width="200px">
             </div>
             <div class="col demo-content bg-alt">
-                <img src="images/Pencil.jpeg" alt="?" height="200px" width="200px">
+                <img src="images/Pencil.jpeg" alt="3 pencils used for scetching" height="200px" width="200px">
             </div>
             <div class="col demo-content">
-                <img src="images/color pens.png" alt="?" height="200px" width="200px">
+                <img src="images/color pens.png" alt="Rainbow colored pens & pink pen" height="200px" width="200px">
             </div>
             <div class="col demo-content bg-alt">
                 <img src="images/pen.jpeg" alt="Black pen" height="200px" width="200px">
+            </div>
+        </div>
+
+        <h1>Paint</h1>
+
+        <h3 class="topheading">Utensels used dor painting:</h3>
+        <div id="Tools">
+            <li>Paint brush
+                <ul>
+                    <li>Round</li>
+                    <li>Liner</li>
+                </ul>
+            </li>
+            <li>Paint
+                <ul>
+                    <li>Watercolor paint</li>
+                    <li>Acrul paint</li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="row">
+            <div class="col demo-content">
+                <img src="images/" alt="?" height="200px" width="200px">
+            </div>
+            <div class="col demo-content bg-alt">
+                <img src="images/" alt="?" height="200px" width="200px">
+            </div>
+            <div class="col demo-content">
+                <img src="images/" alt="?" height="200px" width="200px">
+            </div>
+            <div class="col demo-content bg-alt">
+                <img src="images/" alt="Black pen" height="200px" width="200px">
             </div>
         </div>
 
@@ -142,15 +183,14 @@
             <table class="mt-3">
                 <thead>
                     <tr style="font-size: x-large;">
-                        <th>Drawing</th>
-                        <th>painting</th>
+                        <th>Drawing & Painting</th>
                     </tr>
                 </thead>
                 <tbody>
                     <div id="gallery"></div>
                     <tr>
                         <td>
-                            <div class="container">
+                            <div class="card-container">
                                 <div class="flipper">
                                     <div class="front">
                                         <img src="https://cdn5.vectorstock.com/i/1000x1000/99/84/fashion-with-hand-drawn-female-eye-beautiful-art-vector-21469984.jpg"
@@ -160,7 +200,7 @@
                                     <div class="back">
                                         <a href="https://www.sciencedirect.com/topics/engineering/detail-drawing"
                                             target="_blank">
-                                            <h1>Detail drawing</h1>
+                                            <h1>1</h1>
                                         </a>
                                         <p class="description">A drawing of an eye which is abstract because flowers and
                                             birds ar coming
@@ -169,24 +209,172 @@
                                 </div>
                             </div>
                         </td>
-                        <td>2</td>
-                        <td>3</td>
+                        <td>
+                            <div class="card-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img src="https://cdn5.vectorstock.com/i/1000x1000/99/84/fashion-with-hand-drawn-female-eye-beautiful-art-vector-21469984.jpg"
+                                            alt="Broun eye with birds coming from eyelash" height="200px" width="200px">
+                                        <p class="caption">Art component</p>
+                                    </div>
+                                    <div class="back">
+                                        <a href="https://www.sciencedirect.com/topics/engineering/detail-drawing"
+                                            target="_blank">
+                                            <h1>2</h1>
+                                        </a>
+                                        <p class="description">A drawing of an eye which is abstract because flowers and
+                                            birds ar coming
+                                            from the eyelash of the eye.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img src="https://cdn5.vectorstock.com/i/1000x1000/99/84/fashion-with-hand-drawn-female-eye-beautiful-art-vector-21469984.jpg"
+                                            alt="Broun eye with birds coming from eyelash" height="200px" width="200px">
+                                        <p class="caption">Art component</p>
+                                    </div>
+                                    <div class="back">
+                                        <a href="https://www.sciencedirect.com/topics/engineering/detail-drawing"
+                                            target="_blank">
+                                            <h1>3</h1>
+                                        </a>
+                                        <p class="description">A drawing of an eye which is abstract because flowers and
+                                            birds ar coming
+                                            from the eyelash of the eye.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
+                        <td>
+                            <div class="card-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img src="https://cdn5.vectorstock.com/i/1000x1000/99/84/fashion-with-hand-drawn-female-eye-beautiful-art-vector-21469984.jpg"
+                                            alt="Broun eye with birds coming from eyelash" height="200px" width="200px">
+                                        <p class="caption">Art component</p>
+                                    </div>
+                                    <div class="back">
+                                        <a href="https://www.sciencedirect.com/topics/engineering/detail-drawing"
+                                            target="_blank">
+                                            <h1>4</h1>
+                                        </a>
+                                        <p class="description">A drawing of an eye which is abstract because flowers and
+                                            birds ar coming
+                                            from the eyelash of the eye.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img src="https://cdn5.vectorstock.com/i/1000x1000/99/84/fashion-with-hand-drawn-female-eye-beautiful-art-vector-21469984.jpg"
+                                            alt="Broun eye with birds coming from eyelash" height="200px" width="200px">
+                                        <p class="caption">Art component</p>
+                                    </div>
+                                    <div class="back">
+                                        <a href="https://www.sciencedirect.com/topics/engineering/detail-drawing"
+                                            target="_blank">
+                                            <h1>5</h1>
+                                        </a>
+                                        <p class="description">A drawing of an eye which is abstract because flowers and
+                                            birds ar coming
+                                            from the eyelash of the eye.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card-container">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img src="https://cdn5.vectorstock.com/i/1000x1000/99/84/fashion-with-hand-drawn-female-eye-beautiful-art-vector-21469984.jpg"
+                                            alt="Broun eye with birds coming from eyelash" height="200px" width="200px">
+                                        <p class="caption">Art component</p>
+                                    </div>
+                                    <div class="back">
+                                        <a href="https://www.sciencedirect.com/topics/engineering/detail-drawing"
+                                            target="_blank">
+                                            <h1>6</h1>
+                                        </a>
+                                        <p class="description">A drawing of an eye which is abstract because flowers and
+                                            birds ar coming
+                                            from the eyelash of the eye.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                     </div>
                 </tbody>
             </table>
         </center>
 
-        <h1>Paint</h1>
-
     </main>
 
 
 </body>
+
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <!-- Form -->
+                <form class="form-inline">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                        aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </form>
+                <!-- Form -->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <form class="input-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="Your email"
+                        aria-label="Your email" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                       <a href="form.html"><button class="btn btn-sm btn-outline-white my-0 btn-lg active" type="button">Sign up</button></a> 
+                    </div>
+                </form>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Recording methods:
+        <a
+            href="https://www.vidyard.com/chrome-extension-screen-recording/?utm_source=bing&utm_medium=cpc&utm_campaign=ChromeExtensionScreenRecord&utm_content=ScreenChrome_ChromeExt&utm_term=screen%20recording%20on%20chrome_b&msclkid=b10de701b5291e5a21838661effaf9b5">vidyard.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
 
 </html>

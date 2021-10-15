@@ -24,52 +24,100 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <style type="text/css">
-        div li:hover {
-            background-color: rgba(204, 0, 255, 0.322);
+        #gallery {
+            font-family: "Orbitron", sans-serif;
+            line-height: 1.5em;
+            text-align: center;
         }
 
-        main div li ul li::marker {
-            color: rgb(117, 16, 143);
+        .card-container {
+            display: inline-block;
+            margin: 3%;
+            perspective: 1000px;
         }
 
-        #Tools {
-            display: block;
-            border-radius: 5px;
-            padding: 2vw;
+        .flipper {
+            position: relative;
+            transition: 0.6s;
+            transform-style: preserve-3d;
         }
 
-        td {
-            color: rgb(255, 255, 255);
-            background-color: rgb(147, 23, 179);
+        .back {
+            transform: rotateY(180deg);
         }
 
-        th {
-            color: rgb(255, 255, 255);
-            background-color: rgb(147, 23, 179);
+        .card-container,
+        .front,
+        .back {
+            width: 250px;
+            height: 320px;
         }
 
-        .btn-primary:not(:disabled):not(.disabled).active,
-        .btn-primary:not(:disabled):not(.disabled):active,
-        .show>.btn-primary.dropdown-toggle {
-            color: #fff;
-            background-color: rgb(147, 23, 179);
-            border-color: black;
+        .card-container:hover .flipper {
+            transform: rotateY(180deg);
         }
 
-        .jumbotron {
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            background-color: #ffffff;
-            border-radius: 0.3rem;
+        a {
+            color: rgb(0, 0, 0)
         }
 
-        .display-4 {
-            color: rgb(147, 23, 179);
+        p.caption {
+            position: absolute;
+            bottom: 1vh;
         }
 
-        center table tbody div a {
-            color: rgba(0, 0, 0, 0.671);
+        .description {
+            font-size: 0.9em;
+            padding: 0 20px 20px 20px;
+            text-align: left;
         }
+    </style>
+    div li:hover {
+    background-color: rgba(204, 0, 255, 0.322);
+    }
+
+    main div li ul li::marker {
+    color: rgb(117, 16, 143);
+    }
+
+    #Tools {
+    display: block;
+    border-radius: 5px;
+    padding: 2vw;
+    }
+
+    td {
+    color: rgb(255, 255, 255);
+    background-color: rgb(147, 23, 179);
+    }
+
+    th {
+    color: rgb(255, 255, 255);
+    background-color: rgb(147, 23, 179);
+    }
+
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(147, 23, 179);
+    border-color: black;
+    }
+
+    .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    }
+
+    .display-4 {
+    color: rgb(147, 23, 179);
+    }
+
+    center table tbody div a {
+    color: rgba(0, 0, 0, 0.671);
+    }
     </style>
 
 </head>
@@ -249,7 +297,8 @@
                             <div class="card-container">
                                 <div class="flipper">
                                     <div class="front">
-                                        <img src="images/Nature drawing.jpeg.crdownload" alt="/" height="200px" width="200px">
+                                        <img src="images/Nature drawing.jpeg.crdownload" alt="/" height="200px"
+                                            width="200px">
                                         <p class="caption">Nature drawings</p>
                                     </div>
                                     <div class="back">
@@ -287,8 +336,7 @@
                                         <p class="caption">Building drawing</p>
                                     </div>
                                     <div class="back">
-                                        <a href="+"
-                                            target="_blank">
+                                        <a href="+" target="_blank">
                                             <h1>6</h1>
                                         </a>
                                         <p class="description">?</p>

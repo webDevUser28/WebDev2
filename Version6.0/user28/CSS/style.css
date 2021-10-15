@@ -51,3 +51,28 @@ h1 {
 img {
   width: 100%;
 }
+
+a {
+  color: rgb(0, 0, 0)
+}
+
+p.caption {
+  position: absolute;
+  bottom: 1vh;
+}
+
+.description {
+  font-size: 0.9em;
+  padding: 0 20px 20px 20px;
+  text-align: left;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}

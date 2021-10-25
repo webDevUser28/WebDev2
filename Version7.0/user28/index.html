@@ -174,9 +174,9 @@
                 document.querySelector("li").style.backgroundColor = "#dc3545";
             }
             function secondSelector() {
-                var x = document.querySelectorAll("li");
+                var x = document.querySelectorAll("ol li");
                 var i;
-                for (i = 0; i < x.length; i++) {
+                for (i = 0; i < x.length; i=i+2) {
                     x[i].style.backgroundColor = "#17a2b8";
                 }
             }

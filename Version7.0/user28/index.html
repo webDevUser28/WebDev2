@@ -346,6 +346,10 @@
         <div id="spacing">
             <SCRIPT>
 
+                function ?() {
+                    ?
+                }
+
                 if (document.all || document.getElementById) {
                     document.write('<style>.tictac{')
                     document.write('width:50px;height:50px;')
@@ -432,7 +436,7 @@
                 function check2() {
                     vari()
                     drawCheck()
-                    if (sqr1 == " 🟢 " && sqr2 == " O " && sqr3 == " O ") {
+                    if (sqr1 == " O " && sqr2 == " O " && sqr3 == " O ") {
                         alert("You Lose!")
                         reset()
                     }
@@ -464,34 +468,34 @@
                         alert("You Lose!")
                         reset()
                     }
-                    else if (sqr3 == " 🔵 " && sqr5 == " 🔵 " && sqr7 == " 🔵 ") {
+                    else if (sqr3 == " X " && sqr5 == " X " && sqr7 == " X ") {
                         alert("You Lose!")
                         reset()
                     }
                 }
 
                 function player1Check() {
-                    if (sqr1 == " 🔵 " && sqr2 == " 🔵 " && sqr3 == " 🔵 ") {
+                    if (sqr1 == " X " && sqr2 == " X " && sqr3 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr4 == " 🔵 " && sqr5 == " 🔵 " && sqr6 == " 🔵 ") {
+                    else if (sqr4 == " X " && sqr5 == " X " && sqr6 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr7 == " 🔵 " && sqr8 == " 🔵 " && sqr9 == " 🔵 ") {
+                    else if (sqr7 == " X " && sqr8 == " X " && sqr9 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr1 == " 🔵 " && sqr5 == " 🔵 " && sqr9 == " 🔵 ") {
+                    else if (sqr1 == " X " && sqr5 == " X " && sqr9 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr1 == " 🔵 " && sqr4 == " 🔵 " && sqr7 == " 🔵 ") {
+                    else if (sqr1 == " X " && sqr4 == " X " && sqr7 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr2 == " 🔵 " && sqr5 == " 🔵 " && sqr8 == " X ") {
+                    else if (sqr2 == " X " && sqr5 == " X " && sqr8 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
@@ -697,12 +701,12 @@
                 }
                 function computer() {
                     check2()
-                    if (sqr1 == " 🔵 " && sqr2 == " 🔵 " && sqr3T == 0 && turn == 1) {
+                    if (sqr1 == " X " && sqr2 == " X " && sqr3T == 0 && turn == 1) {
                         document.tic.sqr3.value = " O "
                         sqr3T = 1;
                         turn = 0;
                     }
-                    else if (sqr2 == " 🔵 " && sqr3 == " 🔵 " && sqr1T == 0 && turn == 1) {
+                    else if (sqr2 == " X " && sqr3 == " X " && sqr1T == 0 && turn == 1) {
                         document.tic.sqr1.value = " O "
                         sqr1T = 1;
                         turn = 0;

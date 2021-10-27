@@ -312,11 +312,15 @@
                 }
             }
 
+            function getFarthestButton() {
+                document.getElementById("FarthestButton").innerHTML = document.title.?
+            }
+
         </script>
         <p>Test your Response time!</p>
         Click on "Start" first, and wait until the background color changes. As soon as it changes, hit one of the three
         buttons.
-        <p>How much time did you take to hit the button farthest away from the start button?</p>
+        <p id=FarthestButton>How much time did you take to hit the button farthest away from the start button?</p>
 
         <form name="response">
             Change background color in:
@@ -338,7 +342,7 @@
         </form>
 
         <!--second game-->
-        
+
         <div id="spacing">
             <SCRIPT>
 
@@ -414,7 +418,7 @@
                         alert("You Win!")
                         reset()
                     }
-                    else if (sqr3 == " X " && sqr5 == " X " && sqr7 == " X ") {
+                    else if (sqr3 == " O " && sqr5 == " O " && sqr7 == " O ") {
                         alert("You Win!")
                         reset()
                     }
@@ -428,7 +432,7 @@
                 function check2() {
                     vari()
                     drawCheck()
-                    if (sqr1 == " O " && sqr2 == " O " && sqr3 == " O ") {
+                    if (sqr1 == " 🟢 " && sqr2 == " O " && sqr3 == " O ") {
                         alert("You Lose!")
                         reset()
                     }
@@ -460,34 +464,34 @@
                         alert("You Lose!")
                         reset()
                     }
-                    else if (sqr3 == " O " && sqr5 == " O " && sqr7 == " O ") {
+                    else if (sqr3 == " 🔵 " && sqr5 == " 🔵 " && sqr7 == " 🔵 ") {
                         alert("You Lose!")
                         reset()
                     }
                 }
 
                 function player1Check() {
-                    if (sqr1 == " X " && sqr2 == " X " && sqr3 == " X ") {
+                    if (sqr1 == " 🔵 " && sqr2 == " 🔵 " && sqr3 == " 🔵 ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr4 == " X " && sqr5 == " X " && sqr6 == " X ") {
+                    else if (sqr4 == " 🔵 " && sqr5 == " 🔵 " && sqr6 == " 🔵 ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr7 == " X " && sqr8 == " X " && sqr9 == " X ") {
+                    else if (sqr7 == " 🔵 " && sqr8 == " 🔵 " && sqr9 == " 🔵 ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr1 == " X " && sqr5 == " X " && sqr9 == " X ") {
+                    else if (sqr1 == " 🔵 " && sqr5 == " 🔵 " && sqr9 == " 🔵 ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr1 == " X " && sqr4 == " X " && sqr7 == " X ") {
+                    else if (sqr1 == " 🔵 " && sqr4 == " 🔵 " && sqr7 == " 🔵 ") {
                         alert("Player 1 wins!")
                         reset()
                     }
-                    else if (sqr2 == " X " && sqr5 == " X " && sqr8 == " X ") {
+                    else if (sqr2 == " 🔵 " && sqr5 == " 🔵 " && sqr8 == " X ") {
                         alert("Player 1 wins!")
                         reset()
                     }
@@ -693,12 +697,12 @@
                 }
                 function computer() {
                     check2()
-                    if (sqr1 == " X " && sqr2 == " X " && sqr3T == 0 && turn == 1) {
+                    if (sqr1 == " 🔵 " && sqr2 == " 🔵 " && sqr3T == 0 && turn == 1) {
                         document.tic.sqr3.value = " O "
                         sqr3T = 1;
                         turn = 0;
                     }
-                    else if (sqr2 == " X " && sqr3 == " X " && sqr1T == 0 && turn == 1) {
+                    else if (sqr2 == " 🔵 " && sqr3 == " 🔵 " && sqr1T == 0 && turn == 1) {
                         document.tic.sqr1.value = " O "
                         sqr1T = 1;
                         turn = 0;

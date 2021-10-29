@@ -35,42 +35,43 @@ $currentTime = time();
             font-family: Arial;
             font-size: 0.95em;
             color: #929292;
+        }
 
-            .report-container {
-                border: #E0E0E0 1px solid;
-                padding: 20px 40px 40px 40px;
-                border-radius: 2px;
-                width: 550px;
-                margin: 0 auto;
-                background-color: <?php
-                                    if ($data->main->temp >= 50) {
-                                        echo "blue";
-                                    }
-                                    if ($data->main->temp < 50) {
-                                        echo "red";
-                                    } ?>;
-            }
+        .report-container {
+            border: #212121 20px solid;
+            padding: 20px 40px 40px 40px;
+            border-radius: 2px;
+            width: 550px;
+            margin: 0 auto;
+            background-color: <?php
+                                if ($data->main->temp >= 50) {
+                                    echo "blue";
+                                }
+                                if ($data->main->temp < 50) {
+                                    echo "orange";
+                                } ?>;
+        }
 
-            .weather-icon {
-                vertical-align: middle;
-                margin-right: 20px;
-            }
+        .weather-icon {
+            vertical-align: middle;
+            margin-right: 20px;
+        }
 
-            .weather-forecast {
-                color: #212121;
-                font-size: 1.2em;
-                font-weight: bold;
-                margin: 20px 0px;
-            }
+        .weather-forecast {
+            color: #212121;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0px;
+        }
 
-            span.min-temperature {
-                margin-left: 15px;
-                color: #929292;
-            }
+        span.min-temperature {
+            margin-left: 15px;
+            color: #212121;
+        }
 
-            .time {
-                line-height: 25px;
-            }
+        .time {
+            line-height: 25px;
+        }
     </style>
 
 </head>

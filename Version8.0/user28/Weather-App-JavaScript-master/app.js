@@ -23,7 +23,7 @@ var latitude = 44.7974;
 var longitude = -93.5273;
 
 // GET WEATHER FROM API PROVIDER
-function getWeather(latitude, longitude){
+function getWeather(){
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)

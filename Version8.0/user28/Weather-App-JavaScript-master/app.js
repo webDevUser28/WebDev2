@@ -18,9 +18,9 @@ weather.temperature = {
 // APP CONSTS AND VARS
 const KELVIN = 273;
 // API KEY
-const key = "YOUR KEY HERE";
+const key = "1f9f9b4fd780f8a5490febcc57479f85";
 var latitude = 44.7974;
-var longitude = -93.5273;
+var longitude = "-93.5273";
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(){

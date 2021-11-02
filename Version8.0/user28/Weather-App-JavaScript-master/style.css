@@ -44,7 +44,7 @@ body{
     padding: 10px 0;
 }
 
-.weather-container{
+.weather-outer-container{
     width: 300px;
     height: 260px;
     background-color: #F4F9FF;
@@ -74,17 +74,9 @@ body{
     cursor: pointer;
 }
 
-.temperature-value p:hover{
-    bold
-}
-
 .temperature-value span{
     color: #063449;
     font-size: 0.5em;
-}
-
-.temperature-description{
-    front: 100 11vw sans-serif;
 }
 
 .temperature-description p{
@@ -93,9 +85,6 @@ body{
     color: #063449;
     text-align: center;
     font-size: 1.2em;
-}
-
-.location{
     
 }
 
@@ -105,6 +94,7 @@ body{
     color: #063449;
     text-align: center;
     font-size: 0.8em;
+    
 }
 
 

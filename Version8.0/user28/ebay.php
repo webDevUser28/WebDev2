@@ -11,46 +11,49 @@ $safequery = urlencode($query);  // Make the query URL-friendly
 $i = '0';  // Initialize the item filter index to 0
 // Create a PHP array of the item filters you want to use in your request
 $filterarray =
-  array(
     array(
-    'name' => 'MaxPrice',
-    'value' => '25',
-    'paramName' => 'Currency',
-    'paramValue' => 'USD'),
-    array(
-    'name' => '',
-    'value' => 'true',
-    'paramName' => '',
-    'paramValue' => ''),
-    array(
-    'name' => 'ListingType',
-    'value' => array('AuctionWithBIN','FixedPrice'),
-    'paramName' => '',
-    'paramValue' => ''),
-  );
+        array(
+            'name' => 'MaxPrice',
+            'value' => '25',
+            'paramName' => 'Currency',
+            'paramValue' => 'USD'
+        ),
+        array(
+            'name' => '',
+            'value' => 'true',
+            'paramName' => '',
+            'paramValue' => ''
+        ),
+        array(
+            'name' => 'ListingType',
+            'value' => array('AuctionWithBIN', 'FixedPrice'),
+            'paramName' => '',
+            'paramValue' => ''
+        ),
+    );
 
 // Generates an indexed URL snippet from the array of item filters
-function buildURLArray ($filterarray) {
-  global $urlfilter;
-  global $i;
-  // Iterate through each filter in the array
-  foreach($filterarray as $itemfilter) {
-    // Iterate through each key in the filter
-    foreach ($itemfilter as $key =>$value) {
-      if(is_array($value)) {
-        foreach($value as $j => $content) { // Index the key for each value
-          $urlfilter .= "&itemFilter($i).$key($j)=$content";
+function buildURLArray($filterarray)
+{
+    global $urlfilter;
+    global $i;
+    // Iterate through each filter in the array
+    foreach ($filterarray as $itemfilter) {
+        // Iterate through each key in the filter
+        foreach ($itemfilter as $key => $value) {
+            if (is_array($value)) {
+                foreach ($value as $j => $content) { // Index the key for each value
+                    $urlfilter .= "&itemFilter($i).$key($j)=$content";
+                }
+            } else {
+                if ($value != "") {
+                    $urlfilter .= "&itemFilter($i).$key=$value";
+                }
+            }
         }
-      }
-      else {
-        if($value != "") {
-          $urlfilter .= "&itemFilter($i).$key=$value";
-        }
-      }
+        $i++;
     }
-    $i++;
-  }
-  return "$urlfilter";
+    return "$urlfilter";
 } // End of buildURLArray function
 
 // Build the indexed item filter URL snippet
@@ -71,24 +74,29 @@ $resp = simplexml_load_file($apicall);
 
 // Check to see if the request was successful, else print an error
 if ($resp->ack == "Success") {
-  $results = '';
-  // If the response was loaded, parse it and build links
-  foreach($resp->searchResult->item as $item) {
-    $pic   = $item->galleryURL;
-    $link  = $item->viewItemURL;
-    $title = $item->title;
-    $price = $item->sellingStatus->currentPrice;
-    $shipping = $item->shippingInfo->shippingType;
-/////////////////////////EDIT THIS LINE/////////////////////////////////////////////////////
-    // For each SearchResultItem node, build a link and append it to $results
-    $results .= "<tr><td><img src=\"$pic\"></td><td>$price</td> <td>$shipping<td> <td><a href=\"$link\">$title</a></td></tr>";
-////////////////////////EDIT THIS LINE//////////////////////////////////////////////////////      
-  }
+    $results = '';
+    // If the response was loaded, parse it and build links
+    foreach ($resp->searchResult->item as $item) {
+        $pic   = $item->galleryURL;
+        $link  = $item->viewItemURL;
+        $title = $item->title;
+        $price = $item->sellingStatus->currentPrice;
+        $shipping = $item->shippingInfo->shippingType;
+        /////////////////////////EDIT THIS LINE/////////////////////////////////////////////////////
+        // For each SearchResultItem node, build a link and append it to $results
+        if ($i % 2 == 0) {
+            $results .= "<tr><td><img src=\"$pic\"></td><td>$price</td> <td>$shipping<td> <td><a href=\"$link\">$title</a></td></tr>";
+        } else {
+            $results .= "<tr><td>$shipping</td></tr>";
+        }
+        $i++;
+        ////////////////////////EDIT THIS LINE//////////////////////////////////////////////////////      
+    }
 }
 // If the response does not indicate 'Success,' print an error
 else {
-  $results  = "<h3>Oops! The request was not successful. Make sure you are using a valid ";
-  $results .= "AppID for the Production environment.</h3>";
+    $results  = "<h3>Oops! The request was not successful. Make sure you are using a valid ";
+    $results .= "AppID for the Production environment.</h3>";
 }
 ?>
 <!-- Build the HTML page with values from the call response -->
@@ -96,7 +104,7 @@ else {
 
 <head>
     <title>eBay Search Results for <?php echo $query; ?></title>
-  
+
     <!-- CSS -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -116,7 +124,6 @@ else {
         body {
             font-family: arial, sans-serif;
         }
-
     </style>
 </head>
 
@@ -127,7 +134,7 @@ else {
     <table>
         <tr>
             <td>
-                <?php echo $results;?>
+                <?php echo $results; ?>
             </td>
         </tr>
     </table>

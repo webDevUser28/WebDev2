@@ -77,9 +77,11 @@ if ($resp->ack == "Success") {
     $pic   = $item->galleryURL;
     $link  = $item->viewItemURL;
     $title = $item->title;
+    $price = $item->sellingStatus->currentPrice;
+    $shipping = $item->shippingInfo->shippingType;
 /////////////////////////EDIT THIS LINE/////////////////////////////////////////////////////
     // For each SearchResultItem node, build a link and append it to $results
-    $results .= "<tr><td><img src=\"$pic\"></td><td><a href=\"$link\">$title</a></td></tr>";
+    $results .= "<tr><td><img src=\"$pic\"></td><td>$price</td> <td>$shipping<td> <td><a href=\"$link\">$title</a></td></tr>";
 ////////////////////////EDIT THIS LINE//////////////////////////////////////////////////////      
   }
 }

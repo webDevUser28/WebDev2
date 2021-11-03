@@ -8,7 +8,7 @@ $appid = 'RobertMa-Shakopee-PRD-169ec6b8e-bb30ba02';  // Replace with your own A
 $globalid = 'EBAY-US';  // Global ID of the eBay site you want to search (e.g., EBAY-DE)
 $query = 'screwdrivers';  // You may want to supply your own query
 $safequery = urlencode($query);  // Make the query URL-friendly
-$i = '0';  // Initialize the item filter index to 0
+$i = '1';  // Initialize the item filter index to 0
 // Create a PHP array of the item filters you want to use in your request
 $filterarray =
     array(
@@ -85,9 +85,9 @@ if ($resp->ack == "Success") {
         /////////////////////////EDIT THIS LINE/////////////////////////////////////////////////////
         // For each SearchResultItem node, build a link and append it to $results
         if ($i % 2 == 0) {
-            $results .= "<tr><td><img src=\"$pic\"></td><td>$price</td> <td>$shipping<td> <td><a href=\"$link\">$title</a></td></tr>";
+            $results .= "<tr><td><img src=\"$pic\"></td><td>$price</td><td>$shipping<td><td><a href=\"$link\">$title</a></td>";
         } else {
-            $results .= "<tr><td>$shipping</td></tr>";
+            $results .= "<td><img src=\"$pic\"></td><td>$price</td><td>$shipping<td><td><a href=\"$link\">$title</a></td></tr>";
         }
         $i++;
         ////////////////////////EDIT THIS LINE//////////////////////////////////////////////////////      

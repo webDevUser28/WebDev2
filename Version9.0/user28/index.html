@@ -18,11 +18,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <meta charset="UTF-8">
+    <title>Weather App - JavaScript</title>
+    <link rel="stylesheet" href="font/Rimouski.css">
+    <link rel="stylesheet" href="style.css">
 
     <style type="text/css">
         .blue {
             background-color: rgba(19, 138, 189, 0.838);
             color: rgb(255, 255, 255);
+        }
+
+        .col-md-4 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .weather-outer-container {
+            width: 290px;
+            height: 290px;
         }
     </style>
 
@@ -65,30 +79,29 @@
                 </nav>
             </menu>
             <div class="col-md-4">
-                <div class="weather-outer-container">
+                <div id="weatherblock" class="weather-outer-container">
                     <div class="app-title">
                         <p>Weather</p>
                     </div>
                     <div class="notification"> </div>
                     <div class="weather-container">
                         <div class="weather-icon">
-                            <img src="images/unknown.png" alt="">
+                            <img src="icons/unknown.png" alt="">
                         </div>
                         <div class="temperature-value">
-                            <p><span></span></p>
+                            <p>°<span>C</span></p>
                         </div>
                         <div class="temperature-description">
-                            <p></p>
+                            <p> - </p>
                         </div>
-                        <center><div id="time"></div></center>
+                        <center>
+                            <div id="time"></div>
+                        </center>
                         <div class="location">
-                            <p></p>
+                            <p>-</p>
                         </div>
-                        
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -318,7 +331,6 @@
                             </div>
                         </td>
                     </tr>
-                    </div>
                 </tbody>
             </table>
         </center>
@@ -327,23 +339,37 @@
 
 </body>
 
-<script>(function () {
-    function checkTime(i) {
-        return (i < 10) ? "0" + i : i;
-    }
+<script>
+    (function () {
+        function checkTime(i) {
+            return (i < 10) ? "0" + i : i;
+        }
 
-    function startTime() {
-        var today = new Date(),
-            h = checkTime(today.getHours()),
-            m = checkTime(today.getMinutes()),
-            s = checkTime(today.getSeconds());
-        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-        t = setTimeout(function () {
-            startTime()
-        }, 500);
-    }
-    startTime();
-})();</script>
+        function startTime() {
+            var today = new Date(),
+                h = checkTime(today.getHours()),
+                m = checkTime(today.getMinutes()),
+                s = checkTime(today.getSeconds());
+
+            if (h > 6 && h < 18) {
+                document.getElementById("weatherblock").style.backgroundColor = "#ffffe0"
+            }
+
+            else {
+                document.getElementById("weatherblock").style.backgroundColor = "#191970";
+                document.getElementById("weatherblock").style.bgColorChange = "##FFFFFF"
+            }
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () {
+                startTime()
+            }, 500);
+        }
+        startTime();
+
+
+
+    })();
+</script>
 
 <script src="JS/app.js"></script>
 
@@ -382,6 +408,7 @@
                     <div class="input-group-append">
                         <a href="form.html"><button class="btn btn-sm btn-outline-white my-0 btn-lg active"
                                 type="button">Sign up</button></a>
+
                     </div>
                 </form>
 

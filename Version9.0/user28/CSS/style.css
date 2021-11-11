@@ -129,7 +129,7 @@ th {
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: rgb(23, 119, 179);
+  background-color: rgb(24, 135, 204);
   border-color: black;
 }
 

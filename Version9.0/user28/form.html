@@ -38,6 +38,15 @@
             border-color: black;
             border-radius: 5px;
         }
+
+        .onmouseover {
+            font-family: "Fjalla One", sans-serif;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 0.7em;
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -66,17 +75,48 @@
             <div class="form-group row">
                 <div class="col-sm-10 offset-sm-2">
                     <div class="checkbox">
-                        <label><input type="checkbox"> Remember me</label>
+                        <label>
+                            <input type="checkbox"> Remember me</label>
                     </div>
                 </div>
             </div>
+
+            <div class="onmouseover" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                style="background-color:rgb(255, 255, 255);width:1400px;height:20px;padding:30px;">
+                Sign in</div>
+
+            <script>
+                function mOver(obj) {
+                    obj.innerHTML = "Thank You"
+                }
+
+                function mOut(obj) {
+                    obj.innerHTML = "Sign in"
+                }
+            </script>
+
             <div class="form-group row">
                 <div class="col-sm-10 offset-sm-2">
-                    <a href="ebay.php" class="btn btn-primary">Sign in</a>
+                    <a href="ebay.php" class="btn btn-primary"
+                        onclick="alert('This sign in was essential so that the produkts can be viewed');">Sign in</a>
                 </div>
             </div>
         </form>
     </div>
+
+    <button>Change color</button>
+
+    <script>const btn = document.querySelector('button');
+
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        btn.onclick = function () {
+            const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = rndCol;
+        }</script>
+
 </body>
 
 </html>
